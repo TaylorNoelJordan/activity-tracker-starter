@@ -10,6 +10,6 @@ Fit Lit is a wellness tracking dashboard that takes in multiple user data files 
 1. In terminal run git clone (you replace the [...] with the terminal command arguments): `git clone [remote-address] [what you want to name the repo]`
 1. Once you have cloned the repo, change into the directory and install the library dependencies. Run `npm install` to install project dependencies.
 
-[FitLit](www.fitlit.com)
+[FitLit](https://taylornoeljordan.github.io/activity-tracker-starter/)
 
 
