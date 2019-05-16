@@ -101,6 +101,26 @@ class Activity {
 		const startDate = currentUser.activityData.findIndex(el => el.date === date)
 		return currentUser.activityData.slice(startDate, startDate+7).reduce((a, b) => a += b.numSteps, 0)
 	}
+
+	findStepStreak() {
+		const stepStreak = [];
+		const stepStreakDates = [];
+		const currentUser = this.findUserById();
+		// console.log(currentUser.activityData)
+		currentUser.activityData.forEach(function(user) {
+			if(stepStreak.lenth >= 3) {
+				stepStreak.shift();
+			}
+		
+			stepStreak.push(user.numSteps);
+			
+		if(stepStreak[3] > stepStreak[2] && stepStreak[2] > stepStreak[1]) {
+			stepStreakDates.push(user.date)
+			console.log(stepStreakDates)
+   }
+    });
+    return stepStreakDates;
+	}
 	
 };
 

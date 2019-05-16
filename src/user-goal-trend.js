@@ -38,9 +38,10 @@ class UserGoalTrend {
 	}
 
 	assessTriCategoryGoals() {
-		console.log(this.findActivityDataById())
+
 		const datesGoalsReached = [];
-		const waterGoalMet = this.hydrationData.filter(el => el.numOunces >= this.findHydrationDataById.numOunces)
+		const waterGoalMet = this.hydrationData.map(el => el.hydrationData).map(el => el).filter(el => el.numOunces >= this.waterGoal)
+		console.log(waterGoalMet)
 		// const sleepGoalMet = this.sleepData.filter(el => el.)
 
 	}
