@@ -208,12 +208,14 @@ new Chart(document.getElementById("water-chart"), {
 
 $('.sleep').append("<h4>Your Hours of Sleep Today: <span class='sleep-today'> </span></h4")
 $('.sleep').append("<h4>Your Quality of Sleep Today: <span class='sleep-quality-today'> </span></h4")
-$('.sleep').append("<h4>Your Average Tracked Sleep Hours: <span class='sleep-average'></span></h4") 
+$('.sleep').append("<h4>Your Average Tracked All Time Sleep Hours: <span class='sleep-average'></span></h4") 
 $('.sleep').append("<h4>Your Average Tracked Sleep Quality: <span class='sleep-quality'></span></h4") 
+$('.sleep').append("<h4>Your Average Tracked Sleep Hours By Week: <span class='weekly-sleep-average'></span></h4")
 $('.sleep-today').text(sleep.findHoursSleptByDay(ourUser, date))
 $('.sleep-quality-today').text(sleep.findSleepQualityByDay(ourUser, date))
 $('.sleep-average').text(Number(sleep.findAvgHoursSlept(1)).toFixed(1))
 $('.sleep-quality').text(Number(sleep.findAvgSleepQuality(1)).toFixed(1))
+$('.weekly-sleep-average').text(Number(sleep.findAvgHoursSleptByWeek(ourUser, date)))
 
 sleepDayOne = sleep.findHoursSleptByWeek(ourUser, date)[0]
 sleepDayTwo = sleep.findHoursSleptByWeek(ourUser, date)[1]
