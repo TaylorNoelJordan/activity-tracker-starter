@@ -1,5 +1,5 @@
 $(document).ready(function() {
-const ourUser = 5;
+const ourUser = 1;
 const date = '16/05/2019'
 let userRepo = new UserRepository(userData, ourUser)
 let user = new User(userRepo.currentUser)
