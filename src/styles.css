@@ -67,6 +67,11 @@ span {
   color:#81E6CE; 
 }
 
+.percentage-text {
+  color: #ffffff;
+  font-size: 12px;
+}
+
 .user-info {
   color: #0F0C2B;
 }
