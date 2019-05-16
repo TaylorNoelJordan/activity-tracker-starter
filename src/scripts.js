@@ -42,19 +42,17 @@ $('.user').append("<div class='friends' aria-expanded='true' hidden></div>")
 $('h2.friend-tag').click(function() {
   $('.friends').slideToggle('slow');
   })
-
-  $('.friends').append("<h6> You have <span class='you'></span> steps this week</h6>")
-  $('.friends').append("<h6><span class='friend-1'></span> has <span class='steps-1'></span> steps this week</h6>")
-  $('.friends').append("<h6><span class='friend-2'></span> has <span class='steps-2'></span> steps this week</h6>")
-  $('.friends').append("<h6><span class='friend-3'></span> has <span class='steps-3'></span> steps this week</h6>")
-  $('span.you').text(activity.findStepsForWeek(date))
-  $('span.friend-1').html(user2.returnFirstName());
-  $('span.steps-1').text(activity2.findStepsForWeek(date))
-  $('span.friend-2').html(user3.returnFirstName());
-  $('span.steps-2').text(activity3.findStepsForWeek(date))
-  $('span.friend-3').html(user4.returnFirstName());
-  $('span.steps-3').text(activity4.findStepsForWeek(date))
-
+$('.friends').append("<h6> You have <span class='you'></span> steps this week</h6>")
+$('.friends').append("<h6><span class='friend-1'></span> has <span class='steps-1'></span> steps this week</h6>")
+$('.friends').append("<h6><span class='friend-2'></span> has <span class='steps-2'></span> steps this week</h6>")
+$('.friends').append("<h6><span class='friend-3'></span> has <span class='steps-3'></span> steps this week</h6>")
+$('span.you').text(activity.findStepsForWeek(date))
+$('span.friend-1').html(user2.returnFirstName());
+$('span.steps-1').text(activity2.findStepsForWeek(date))
+$('span.friend-2').html(user3.returnFirstName());
+$('span.steps-2').text(activity3.findStepsForWeek(date))
+$('span.friend-3').html(user4.returnFirstName());
+$('span.steps-3').text(activity4.findStepsForWeek(date))
 
 
 //Activity
@@ -96,7 +94,6 @@ actDayFour = activity.findHoursActiveByDay('13/05/2019')
 actDayThree = activity.findHoursActiveByDay('12/05/2019')
 actDayTwo = activity.findHoursActiveByDay('11/05/2019')
 actDayOne = activity.findHoursActiveByDay('10/05/2019')
-//Make a metric of your own! Document it, calculate it, and display it.
 
 new Chart(document.getElementById("activity-chart"), {
   type: 'bar',
@@ -194,9 +191,9 @@ new Chart(document.getElementById("water-chart"), {
                 fontColor: "white",
                 fontSize: 10,
                 maxTicksLimit: 4,
-                min: 30,
+                min: 10,
                 max: 100,
-                stepSize: 20,
+                stepSize: 30,
                 }
             }]
     }

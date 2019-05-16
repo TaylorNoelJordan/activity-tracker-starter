@@ -79,6 +79,11 @@ span {
 .hydration {
   border-right: solid 1px gray;
 }
+.activity, 
+.hydration,
+.sleep {
+  height: 1000px;
+}
 
 
 .friends {
