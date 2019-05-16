@@ -78,6 +78,12 @@ describe('Activity', function() {
         "numSteps": 12224,
         "minutesActive": 228,
         "flightsOfStairs": 32
+      },
+       {
+        "date": "16/05/2019",
+        "numSteps": 13622,
+        "minutesActive": 50,
+        "flightsOfStairs": 4
       }
      ]
    },
@@ -191,7 +197,7 @@ describe('Activity', function() {
 	});
 
 	it('should find all days a user exceeded their step goal', function() {
-		expect(activity.findExceededDailyStepGoalDates()).to.eql(['10/05/2019', '12/05/2019', '15/05/2019'])
+		expect(activity.findExceededDailyStepGoalDates()).to.eql(['10/05/2019', '12/05/2019', '15/05/2019', '16/05/2019'])
 	});
 
 	it('should find a user\'s most stairs climbed', function() {
@@ -204,6 +210,10 @@ describe('Activity', function() {
 
   it('should find a user\'s step count for the week', function(){
     expect(activity.findStepsForWeek('06/05/2019')).to.equal(46209)
+  });
+
+  it('should find a user\'s increasing steps for a 3 or more day streak', function() {
+  	expect(activity.findStepStreak()).to.eql(['13/05/2019', '14/05/2019', '15/05/2019', '16/05/2019'])
   })
 
 
